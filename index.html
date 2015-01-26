@@ -1,0 +1,52 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>上大岡聖書教会 同盟キリスト教団 横浜市港南区 　牧師：鈴木大輝</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!-- 必要なcssを読み込む -->
+<link href="./css/jquery.multiscroll.css" rel="stylesheet" type="text/css"></link>
+<link href="./css/jquery.slider.css" rel="stylesheet" type="text/css" />
+<link href="./css/main.css" rel="stylesheet" type="text/css"></link>
+<!-- 必要なjsを読み込む -->
+<script type="text/javascript" src="./prop/p.js"></script>
+<script type="text/javascript" src="./js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="./js/tabletop.js"></script>
+<script type="text/javascript" src="./js/util.js"></script>
+<!--<script type="text/javascript" src="./js/jquery.slider.js"></script>-->
+<script type="text/javascript">
+<!--
+  /*画面の初期化*/
+  $(document).ready(function(){
+    initializePage() ;
+  });
+  /*ウィンドウのリサイズに処理を登録する*/
+  var timer = false;
+  $(window).resize(function() {
+    if (timer !== false) {
+      clearTimeout(timer);
+    }
+    timer = setTimeout(function() {
+      changeWithWindow()
+    }, 200);
+  });
+-->
+</script>
+</head>
+<body>
+
+  <div id="loading">
+    <!--ページの初期読み込み時に表示するDOM こいつだけは静的に生成する-->
+    <img src="./img/load.gif" /><br />
+    読込中
+  </div>
+<!--メニュー読込先のDOM-->
+  <ul id="menu">
+  </ul>
+<!--背景画像読込先のDOM-->
+  <div id="pageImg">
+  </div>
+<!--本体読込先のDOM-->
+  <div id="pageBody">
+  </div>
+</body>
+</html>

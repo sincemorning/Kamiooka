@@ -1,0 +1,653 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentFile xmlns="Content.xsd">
+	<Wizard name="MainWIZ_EA">
+		<Page resID="IDR_DUI_HUB_MAIN_EA" nextAction="NONE" backAction="NONE">
+			<Item name="group1Link" action="JUMP IDR_DUI_TROUBLESHOOT_USER_CHAR_0_EA"></Item>
+			<Item name="group1Img" action="JUMP IDR_DUI_TROUBLESHOOT_USER_CHAR_0_EA"></Item>
+			<Item name="group2Link" action="GOTO MainWIZ.IDR_DUI_HUB_MAIN"></Item>
+			<Item name="group2Img" action="GOTO MainWIZ.IDR_DUI_HUB_MAIN"></Item>
+		</Page>
+		<Page resID="IDR_DUI_TROUBLESHOOT_USER_CHAR_0_EA" backAction="BACK;CLEAR ALL">
+			<Item name="editBox" action="ComplexActionForEditBox" font="font"></Item>
+			<Item name="charCount" data="7" hide="hide"></Item>
+			<Item name="clearButton" action="CLEAR editBox"></Item>
+			<Item name="pText"></Item>
+			<Item name="OptIn" action="OPT_IN" hide="LOADFROMCODE HideOptIn ENDLOAD"></Item>
+			<Item name="Migration" action="HELP mshelp://windows/?id=eaee7ae5-c4db-4988-ad04-03fa6ca31b8b"></Item>
+			<Item name="ResetRecognizer" action="RESET_RECOGNIZER"></Item>
+			<Item name="Help" action="HELP mshelp://windows/?id=9a111497-b562-403e-961f-643c56cca412"></Item>
+		</Page>
+		<Page resID="IDR_DUI_TROUBLESHOOT_USER_CHAR_1">
+			<Item name="toolTip_Title" 
+				  data="LOADFROMFILE Alphabet.xml LOADFROMHERE IDR_DUI_TROUBLESHOOT_USER_CHAR_0_EA editBox ENDLOAD name ENDLOAD"></Item>
+			<Item name="labelLetter1_1"
+				  data="LOADFROMHERE IDR_DUI_TROUBLESHOOT_USER_CHAR_0_EA editBox ENDLOAD"
+				  font="font"></Item>
+			<Item name="labelLetter1_2" data="LOADFROMHERE THISPAGE labelLetter1_1 ENDLOAD" font="font"></Item>
+			<Item name="labelLetter1_3" data="LOADFROMHERE THISPAGE labelLetter1_1 ENDLOAD" font="font"></Item>
+			<Item name="labelLetter1_4" data="LOADFROMHERE THISPAGE labelLetter1_1 ENDLOAD" font="font"></Item>
+			<Item name="labelLetter1_5" hide="hide"></Item>
+			<Item name="InkCollectorHost1" guide="BOXED 4" data="INK_ITEM_TYPE_SUI_BOX_ORIGINAL"></Item>
+			<Item name="pageIndex" data="1"></Item>
+			<Item name="pageCount" data="LOADFROMHERE SavedWIZ.IDR_DUI_SAVED PAGECOUNT LOADFROMCODE Has_Confusables ENDLOAD ENDLOAD"></Item>
+			<Item name="inkButton" action="EDITMODE INK"></Item>
+			<Item name="eraseButton" action="EDITMODE ERASE"></Item>
+			<Item name="clearButton" action="CLEAR CURRENT;EDITMODE INK"></Item>
+			<Item name="pText"></Item>
+		</Page>
+		<Page resID="IDR_DUI_TROUBLESHOOT_USER_CHAR_2" nextText="Save" nextAction="SAVE ALL;JUMP IDR_DUI_SAVED">
+			<Item name="labelLetter1_1" data="LOADFROMCODE EA_Confusable_1 ENDLOAD"
+				  accDesc="LOADFROMFILE Alphabet.xml LOADFROMCODE EA_Confusable_1 ENDLOAD name ENDLOAD"
+				  hide="LOADFROMCODE EA_Confusable_1 ENDLOAD"
+				  font="font"></Item>
+			<Item name="labelLetter1_2" data="LOADFROMCODE EA_Confusable_2 ENDLOAD"
+				  accDesc="LOADFROMFILE Alphabet.xml LOADFROMCODE EA_Confusable_2 ENDLOAD name ENDLOAD"
+				  hide="LOADFROMCODE EA_Confusable_2 ENDLOAD"
+				  font="font"></Item>
+			<Item name="labelLetter1_3" data="LOADFROMCODE EA_Confusable_3 ENDLOAD"
+				  accDesc="LOADFROMFILE Alphabet.xml LOADFROMCODE EA_Confusable_3 ENDLOAD name ENDLOAD"
+				  hide="LOADFROMCODE EA_Confusable_3 ENDLOAD"
+				  font="font"></Item>
+			<Item name="labelLetter1_4" data="LOADFROMCODE EA_Confusable_4 ENDLOAD"
+				  accDesc="LOADFROMFILE Alphabet.xml LOADFROMCODE EA_Confusable_4 ENDLOAD name ENDLOAD"
+				  hide="LOADFROMCODE EA_Confusable_4 ENDLOAD"
+				  font="font"></Item>
+			<Item name="labelLetter1_5" data="LOADFROMCODE EA_Confusable_5 ENDLOAD"
+				  accDesc="LOADFROMFILE Alphabet.xml LOADFROMCODE EA_Confusable_5 ENDLOAD name ENDLOAD"
+				  hide="LOADFROMCODE EA_Confusable_5 ENDLOAD"
+				  font="font"></Item>
+			<Item name="InkCollectorHost1" guide="BOXED 5" data="INK_ITEM_TYPE_SUI_BOX_CONFUSION"></Item>
+			<Item name="pageIndex" data="LOADFROMHERE PREVIOUSPAGE pageCount ENDLOAD"></Item>
+			<Item name="pageCount" data="LOADFROMHERE pageIndex ENDLOAD"></Item>
+			<Item name="inkButton" action="EDITMODE INK"></Item>
+			<Item name="eraseButton" action="EDITMODE ERASE"></Item>
+			<Item name="clearButton" action="CLEAR CURRENT;EDITMODE INK"></Item>
+			<Item name="pText"></Item>
+		</Page>
+		<Page resID="IDR_DUI_TROUBLESHOOT_USER_CHAR_4_EA"
+			backAction="JUMP IDR_DUI_TROUBLESHOOT_USER_CHAR_0_EA">
+			<Item name="initialPara_2" hide="hide"/>
+			<Item name="labelLetter1_1" data="LOADFROMHERE IDR_DUI_TROUBLESHOOT_USER_CHAR_0_EA editBox 0 ENDLOAD"
+				accDesc="LOADFROMFILE Alphabet.xml LOADFROMHERE THISPAGE labelLetter1_1 ENDLOAD name ENDLOAD"
+				hide="LOADFROMHERE THISPAGE labelLetter1_1 ENDLOAD"
+				font="font"></Item>
+			<Item name="labelLetter1_2" data="LOADFROMHERE IDR_DUI_TROUBLESHOOT_USER_CHAR_0_EA editBox 1 ENDLOAD"
+				accDesc="LOADFROMFILE Alphabet.xml LOADFROMHERE THISPAGE labelLetter1_2 ENDLOAD name ENDLOAD"
+				hide="LOADFROMHERE THISPAGE labelLetter1_2 ENDLOAD"
+				font="font"></Item>
+			<Item name="labelLetter1_3" data="LOADFROMHERE IDR_DUI_TROUBLESHOOT_USER_CHAR_0_EA editBox 2 ENDLOAD"
+				accDesc="LOADFROMFILE Alphabet.xml LOADFROMHERE THISPAGE labelLetter1_3 ENDLOAD name ENDLOAD"
+				hide="LOADFROMHERE THISPAGE labelLetter1_3 ENDLOAD"
+				font="font"></Item>
+			<Item name="labelLetter1_4" data="LOADFROMHERE IDR_DUI_TROUBLESHOOT_USER_CHAR_0_EA editBox 3 ENDLOAD"
+				accDesc="LOADFROMFILE Alphabet.xml LOADFROMHERE THISPAGE labelLetter1_4 ENDLOAD name ENDLOAD"
+				hide="LOADFROMHERE THISPAGE labelLetter1_4 ENDLOAD"
+				font="font"></Item>
+			<Item name="labelLetter1_5" data="LOADFROMHERE IDR_DUI_TROUBLESHOOT_USER_CHAR_0_EA editBox 4 ENDLOAD"
+				accDesc="LOADFROMFILE Alphabet.xml LOADFROMHERE THISPAGE labelLetter1_5 ENDLOAD name ENDLOAD"
+				hide="LOADFROMHERE THISPAGE labelLetter1_5 ENDLOAD"
+				font="font"></Item>
+			<Item name="labelLetter1_6" data="LOADFROMHERE IDR_DUI_TROUBLESHOOT_USER_CHAR_0_EA editBox 5 ENDLOAD"
+				accDesc="LOADFROMFILE Alphabet.xml LOADFROMHERE THISPAGE labelLetter1_6 ENDLOAD name ENDLOAD"
+				hide="LOADFROMHERE THISPAGE labelLetter1_6 ENDLOAD"
+				font="font"></Item>
+			<Item name="labelLetter1_7" data="LOADFROMHERE IDR_DUI_TROUBLESHOOT_USER_CHAR_0_EA editBox 6 ENDLOAD"
+				accDesc="LOADFROMFILE Alphabet.xml LOADFROMHERE THISPAGE labelLetter1_7 ENDLOAD name ENDLOAD"
+				hide="LOADFROMHERE THISPAGE labelLetter1_7 ENDLOAD"
+				font="font"></Item>
+			<Item name="InkCollectorHost1" guide="BOXED 7" data="INK_ITEM_TYPE_SUI_BOX_ORIGINAL"></Item>
+			<Item name="labelLetter2_1" data="LOADFROMHERE IDR_DUI_TROUBLESHOOT_USER_CHAR_0_EA editBox 0 ENDLOAD"
+				accDesc="LOADFROMFILE Alphabet.xml LOADFROMHERE THISPAGE labelLetter1_1 ENDLOAD name ENDLOAD"
+				hide="LOADFROMHERE THISPAGE labelLetter1_1 ENDLOAD"
+				font="font"></Item>
+			<Item name="labelLetter2_2" data="LOADFROMHERE IDR_DUI_TROUBLESHOOT_USER_CHAR_0_EA editBox 1 ENDLOAD"
+				accDesc="LOADFROMFILE Alphabet.xml LOADFROMHERE THISPAGE labelLetter1_2 ENDLOAD name ENDLOAD"
+				hide="LOADFROMHERE THISPAGE labelLetter1_2 ENDLOAD"
+				font="font"></Item>
+			<Item name="labelLetter2_3" data="LOADFROMHERE IDR_DUI_TROUBLESHOOT_USER_CHAR_0_EA editBox 2 ENDLOAD"
+				accDesc="LOADFROMFILE Alphabet.xml LOADFROMHERE THISPAGE labelLetter1_3 ENDLOAD name ENDLOAD"
+				hide="LOADFROMHERE THISPAGE labelLetter1_3 ENDLOAD"
+				font="font"></Item>
+			<Item name="labelLetter2_4" data="LOADFROMHERE IDR_DUI_TROUBLESHOOT_USER_CHAR_0_EA editBox 3 ENDLOAD"
+				accDesc="LOADFROMFILE Alphabet.xml LOADFROMHERE THISPAGE labelLetter1_4 ENDLOAD name ENDLOAD"
+				hide="LOADFROMHERE THISPAGE labelLetter1_4 ENDLOAD"
+				font="font"></Item>
+			<Item name="labelLetter2_5" data="LOADFROMHERE IDR_DUI_TROUBLESHOOT_USER_CHAR_0_EA editBox 4 ENDLOAD"
+				accDesc="LOADFROMFILE Alphabet.xml LOADFROMHERE THISPAGE labelLetter1_5 ENDLOAD name ENDLOAD"
+				hide="LOADFROMHERE THISPAGE labelLetter1_5 ENDLOAD"
+				font="font"></Item>
+			<Item name="labelLetter2_6" data="LOADFROMHERE IDR_DUI_TROUBLESHOOT_USER_CHAR_0_EA editBox 5 ENDLOAD"
+				accDesc="LOADFROMFILE Alphabet.xml LOADFROMHERE THISPAGE labelLetter1_6 ENDLOAD name ENDLOAD"
+				hide="LOADFROMHERE THISPAGE labelLetter1_6 ENDLOAD"
+				font="font"></Item>
+			<Item name="labelLetter2_7" data="LOADFROMHERE IDR_DUI_TROUBLESHOOT_USER_CHAR_0_EA editBox 6 ENDLOAD"
+				accDesc="LOADFROMFILE Alphabet.xml LOADFROMHERE THISPAGE labelLetter1_7 ENDLOAD name ENDLOAD"
+				hide="LOADFROMHERE THISPAGE labelLetter1_7 ENDLOAD"
+				font="font"></Item>
+			<Item name="InkCollectorHost2" guide="BOXED 7" data="INK_ITEM_TYPE_SUI_BOX_ORIGINAL"></Item>
+			<Item name="pageIndex" data="1"></Item>
+			<Item name="pageCount" data="LOADFROMHERE SavedWIZ.IDR_DUI_SAVED PAGECOUNT LOADFROMHERE SavedWIZ.IDR_DUI_SAVED PAGECOUNT LOADFROMCODE Has_Confusables ENDLOAD ENDLOAD ENDLOAD"></Item>
+			<Item name="inkButton" action="EDITMODE INK"></Item>
+			<Item name="eraseButton" action="EDITMODE ERASE"></Item>
+			<Item name="clearButton" action="CLEAR CURRENT;EDITMODE INK"></Item>
+			<Item name="pText"></Item>
+		</Page>
+		<Page resID="IDR_DUI_TROUBLESHOOT_USER_CHAR_4_EA_LOOP1" nextAction="GOTO IDR_DUI_TROUBLESHOOT_USER_CHAR_2">
+			<Item name="initialPara" hide="hide"/>
+			<Item name="labelLetter1_1" data="LOADFROMHERE IDR_DUI_TROUBLESHOOT_USER_CHAR_0_EA editBox 0 ENDLOAD"
+				accDesc="LOADFROMFILE Alphabet.xml LOADFROMHERE THISPAGE labelLetter1_1 ENDLOAD name ENDLOAD"
+				hide="LOADFROMHERE THISPAGE labelLetter1_1 ENDLOAD"
+				font="font"></Item>
+			<Item name="labelLetter1_2" data="LOADFROMHERE IDR_DUI_TROUBLESHOOT_USER_CHAR_0_EA editBox 1 ENDLOAD"
+				accDesc="LOADFROMFILE Alphabet.xml LOADFROMHERE THISPAGE labelLetter1_2 ENDLOAD name ENDLOAD"
+				hide="LOADFROMHERE THISPAGE labelLetter1_2 ENDLOAD"
+				font="font"></Item>
+			<Item name="labelLetter1_3" data="LOADFROMHERE IDR_DUI_TROUBLESHOOT_USER_CHAR_0_EA editBox 2 ENDLOAD"
+				accDesc="LOADFROMFILE Alphabet.xml LOADFROMHERE THISPAGE labelLetter1_3 ENDLOAD name ENDLOAD"
+				hide="LOADFROMHERE THISPAGE labelLetter1_3 ENDLOAD"
+				font="font"></Item>
+			<Item name="labelLetter1_4" data="LOADFROMHERE IDR_DUI_TROUBLESHOOT_USER_CHAR_0_EA editBox 3 ENDLOAD"
+				accDesc="LOADFROMFILE Alphabet.xml LOADFROMHERE THISPAGE labelLetter1_4 ENDLOAD name ENDLOAD"
+				hide="LOADFROMHERE THISPAGE labelLetter1_4 ENDLOAD"
+				font="font"></Item>
+			<Item name="labelLetter1_5" data="LOADFROMHERE IDR_DUI_TROUBLESHOOT_USER_CHAR_0_EA editBox 4 ENDLOAD"
+				accDesc="LOADFROMFILE Alphabet.xml LOADFROMHERE THISPAGE labelLetter1_5 ENDLOAD name ENDLOAD"
+				hide="LOADFROMHERE THISPAGE labelLetter1_5 ENDLOAD"
+				font="font"></Item>
+			<Item name="labelLetter1_6" data="LOADFROMHERE IDR_DUI_TROUBLESHOOT_USER_CHAR_0_EA editBox 5 ENDLOAD"
+				accDesc="LOADFROMFILE Alphabet.xml LOADFROMHERE THISPAGE labelLetter1_6 ENDLOAD name ENDLOAD"
+				hide="LOADFROMHERE THISPAGE labelLetter1_6 ENDLOAD"
+				font="font"></Item>
+			<Item name="labelLetter1_7" data="LOADFROMHERE IDR_DUI_TROUBLESHOOT_USER_CHAR_0_EA editBox 6 ENDLOAD"
+				accDesc="LOADFROMFILE Alphabet.xml LOADFROMHERE THISPAGE labelLetter1_7 ENDLOAD name ENDLOAD"
+				hide="LOADFROMHERE THISPAGE labelLetter1_7 ENDLOAD"
+				font="font"></Item>
+			<Item name="InkCollectorHost1" guide="BOXED 7" data="INK_ITEM_TYPE_SUI_BOX_ORIGINAL"></Item>
+			<Item name="labelLetter2_1" data="LOADFROMHERE IDR_DUI_TROUBLESHOOT_USER_CHAR_0_EA editBox 0 ENDLOAD"
+				accDesc="LOADFROMFILE Alphabet.xml LOADFROMHERE THISPAGE labelLetter1_1 ENDLOAD name ENDLOAD"
+				hide="LOADFROMHERE THISPAGE labelLetter1_1 ENDLOAD"
+				font="font"></Item>
+			<Item name="labelLetter2_2" data="LOADFROMHERE IDR_DUI_TROUBLESHOOT_USER_CHAR_0_EA editBox 1 ENDLOAD"
+				accDesc="LOADFROMFILE Alphabet.xml LOADFROMHERE THISPAGE labelLetter1_2 ENDLOAD name ENDLOAD"
+				hide="LOADFROMHERE THISPAGE labelLetter1_2 ENDLOAD"
+				font="font"></Item>
+			<Item name="labelLetter2_3" data="LOADFROMHERE IDR_DUI_TROUBLESHOOT_USER_CHAR_0_EA editBox 2 ENDLOAD"
+				accDesc="LOADFROMFILE Alphabet.xml LOADFROMHERE THISPAGE labelLetter1_3 ENDLOAD name ENDLOAD"
+				hide="LOADFROMHERE THISPAGE labelLetter1_3 ENDLOAD"
+				font="font"></Item>
+			<Item name="labelLetter2_4" data="LOADFROMHERE IDR_DUI_TROUBLESHOOT_USER_CHAR_0_EA editBox 3 ENDLOAD"
+				accDesc="LOADFROMFILE Alphabet.xml LOADFROMHERE THISPAGE labelLetter1_4 ENDLOAD name ENDLOAD"
+				hide="LOADFROMHERE THISPAGE labelLetter1_4 ENDLOAD"
+				font="font"></Item>
+			<Item name="labelLetter2_5" data="LOADFROMHERE IDR_DUI_TROUBLESHOOT_USER_CHAR_0_EA editBox 4 ENDLOAD"
+				accDesc="LOADFROMFILE Alphabet.xml LOADFROMHERE THISPAGE labelLetter1_5 ENDLOAD name ENDLOAD"
+				hide="LOADFROMHERE THISPAGE labelLetter1_5 ENDLOAD"
+				font="font"></Item>
+			<Item name="labelLetter2_6" data="LOADFROMHERE IDR_DUI_TROUBLESHOOT_USER_CHAR_0_EA editBox 5 ENDLOAD"
+				accDesc="LOADFROMFILE Alphabet.xml LOADFROMHERE THISPAGE labelLetter1_6 ENDLOAD name ENDLOAD"
+				hide="LOADFROMHERE THISPAGE labelLetter1_6 ENDLOAD"
+				font="font"></Item>
+			<Item name="labelLetter2_7" data="LOADFROMHERE IDR_DUI_TROUBLESHOOT_USER_CHAR_0_EA editBox 6 ENDLOAD"
+				accDesc="LOADFROMFILE Alphabet.xml LOADFROMHERE THISPAGE labelLetter1_7 ENDLOAD name ENDLOAD"
+				hide="LOADFROMHERE THISPAGE labelLetter1_7 ENDLOAD"
+				font="font"></Item>
+			<Item name="InkCollectorHost2" guide="BOXED 7" data="INK_ITEM_TYPE_SUI_BOX_ORIGINAL"></Item>
+			<Item name="pageIndex" data="2"></Item>
+			<Item name="pageCount" data="LOADFROMHERE SavedWIZ.IDR_DUI_SAVED PAGECOUNT LOADFROMHERE SavedWIZ.IDR_DUI_SAVED PAGECOUNT LOADFROMCODE Has_Confusables ENDLOAD ENDLOAD ENDLOAD"></Item>
+			<Item name="inkButton" action="EDITMODE INK"></Item>
+			<Item name="eraseButton" action="EDITMODE ERASE"></Item>
+			<Item name="clearButton" action="CLEAR CURRENT;EDITMODE INK"></Item>
+			<Item name="pText"></Item>
+		</Page>
+		<Page resID="IDR_DUI_SAVED" nextAction="NONE" backAction="NONE" cancelAction="NONE" 
+			finishText="Update and exit" finishAction="TRAIN;CLOSE">
+			<Item name="group1Link" action="RESET_CONTENT;GOTO IDR_DUI_TROUBLESHOOT_USER_CHAR_0_EA"></Item>
+			<Item name="group1Img" action="RESET_CONTENT;GOTO IDR_DUI_TROUBLESHOOT_USER_CHAR_0_EA"></Item>
+			<Item name="Updating_warningText" action="OPT_IN" hide="LOADFROMCODE HideUpdatingWarning ENDLOAD"></Item>
+			<Item name="Updating_warningText_GP" hide="LOADFROMCODE HideUpdatingWarning_GP ENDLOAD"></Item>
+		</Page>
+	</Wizard>
+	<Wizard name="MainWIZ">
+		<Page resID="IDR_DUI_HUB_MAIN" nextAction="NONE" backAction="NONE">
+			<Item name="group1Link" action="GOTO TroubleshootWIZ.IDR_DUI_HUB_USERDRIVENTROUBLESHOOT"></Item>
+			<Item name="group1Img" action="GOTO TroubleshootWIZ.IDR_DUI_HUB_USERDRIVENTROUBLESHOOT"></Item>
+			<Item name="group2Link" action="GOTO ScriptedWIZ.IDR_DUI_HUB_SCRIPTED"></Item>
+			<Item name="group2Img" action="GOTO ScriptedWIZ.IDR_DUI_HUB_SCRIPTED"></Item>
+			<Item name="OptIn" action="OPT_IN" hide="LOADFROMCODE HideOptIn ENDLOAD"></Item>
+			<Item name="Migration" action="HELP mshelp://windows/?id=eaee7ae5-c4db-4988-ad04-03fa6ca31b8b"></Item>
+			<Item name="ResetRecognizer" action="RESET_RECOGNIZER"></Item>
+			<Item name="Help" action="HELP mshelp://windows/?id=9a111497-b562-403e-961f-643c56cca412"></Item>
+		</Page>
+	</Wizard>
+	<Wizard name="SavedWIZ">
+		<Page resID="IDR_DUI_SAVED" nextAction="NONE" backAction="NONE" cancelAction="NONE" 
+			finishText="Update and exit" finishAction="TRAIN;CLOSE">
+			<Item name="group1Link" action="RESET_CONTENT;GOTO MainWIZ.IDR_DUI_HUB_MAIN"></Item>
+			<Item name="group1Img" action="RESET_CONTENT;GOTO MainWIZ.IDR_DUI_HUB_MAIN"></Item>
+			<Item name="Updating_warningText" action="OPT_IN" hide="LOADFROMCODE HideUpdatingWarning ENDLOAD"></Item>
+			<Item name="Updating_warningText_GP" hide="LOADFROMCODE HideUpdatingWarning_GP ENDLOAD"></Item>
+		</Page>
+	</Wizard>
+	<Wizard name="ScriptedWIZ">
+		<Page resID="IDR_DUI_HUB_SCRIPTED" nextAction="NONE" backAction="JUMP MainWIZ.IDR_DUI_HUB_MAIN">
+			<Item name="ccSysLink" action="HELP mshelp://windows/?id=9a111497-b562-403e-961f-643c56cca412#teach_table"></Item>
+			<Item name="group1Img" action="JUMP IDR_DUI_SCRIPTED_INTRO"></Item>
+			<Item name="group1Link" action="JUMP IDR_DUI_SCRIPTED_INTRO"></Item>
+			<Item name="group2Img" action="JUMP IDR_DUI_SCRIPTED_NUMBERS"></Item>
+			<Item name="group2Link" action="JUMP IDR_DUI_SCRIPTED_NUMBERS"></Item>
+		</Page>
+		<Page resID="IDR_DUI_SCRIPTED_INTRO" 
+			nextAction="GOTO PhrasesWIZ.IDR_DUI_SCRIPTED_PHRASES_LOOPLOADFROMCODE PhraseIndex ENDLOAD"
+			backAction="BACK;CLEAR ALL">
+		</Page>
+		<Page resID="IDR_DUI_SCRIPTED_NUMBERS" nextAction="GOTO IDR_DUI_SCRIPTED_SYMBOLS" 
+			backAction="JUMP IDR_DUI_HUB_SCRIPTED;CLEAR ALL">
+			<Item name="labelLetter1_1" data="0"></Item>
+			<Item name="labelLetter1_2" data="1"></Item>
+			<Item name="labelLetter1_3" data="2"></Item>
+			<Item name="labelLetter1_4" data="3"></Item>
+			<Item name="labelLetter1_5" data="4"></Item>
+			<Item name="labelLetter1_6" data="5"></Item>
+			<Item name="labelLetter1_7" data="6"></Item>
+			<Item name="labelLetter1_8" data="7"></Item>
+			<Item name="labelLetter1_9" data="8"></Item>
+			<Item name="labelLetter1_10" data="9"></Item>
+			<Item name="InkCollectorHost1" guide="BOXED 10" data="INK_ITEM_TYPE_SUI_BOXSCRIPT"></Item>
+			<Item name="pageIndex" data="1"></Item>
+			<Item name="pageCount" data="LOADFROMHERE LettersWIZ.IDR_DUI_SCRIPTED_LETTERS PAGECOUNT 3 ENDLOAD"></Item>
+			<Item name="inkButton" action="EDITMODE INK"></Item>
+			<Item name="eraseButton" action="EDITMODE ERASE"></Item>
+			<Item name="clearButton" action="CLEAR CURRENT;EDITMODE INK"></Item>
+			<Item name="pText"></Item>
+		</Page>
+		<Page resID="IDR_DUI_SCRIPTED_SYMBOLS">
+			<Item name="labelLetter1_1" data="LOADFROMFILE Alphabet.xml Symbols word1 ENDLOAD"
+				accDesc="LOADFROMFILE Alphabet.xml LOADFROMHERE THISPAGE labelLetter1_1 ENDLOAD name ENDLOAD"></Item>
+			<Item name="labelLetter1_2" data="LOADFROMFILE Alphabet.xml Symbols word2 ENDLOAD"
+				accDesc="LOADFROMFILE Alphabet.xml LOADFROMHERE THISPAGE labelLetter1_2 ENDLOAD name ENDLOAD"></Item>
+			<Item name="labelLetter1_3" data="LOADFROMFILE Alphabet.xml Symbols word3 ENDLOAD"
+				accDesc="LOADFROMFILE Alphabet.xml LOADFROMHERE THISPAGE labelLetter1_3 ENDLOAD name ENDLOAD"></Item>
+			<Item name="labelLetter1_4" data="LOADFROMFILE Alphabet.xml Symbols word4 ENDLOAD"
+				accDesc="LOADFROMFILE Alphabet.xml LOADFROMHERE THISPAGE labelLetter1_4 ENDLOAD name ENDLOAD"></Item>
+			<Item name="labelLetter1_5" data="LOADFROMFILE Alphabet.xml Symbols word5 ENDLOAD"
+				accDesc="LOADFROMFILE Alphabet.xml LOADFROMHERE THISPAGE labelLetter1_5 ENDLOAD name ENDLOAD"></Item>
+			<Item name="labelLetter1_6" data="LOADFROMFILE Alphabet.xml Symbols word6 ENDLOAD"
+				accDesc="LOADFROMFILE Alphabet.xml LOADFROMHERE THISPAGE labelLetter1_6 ENDLOAD name ENDLOAD"></Item>
+			<Item name="labelLetter1_7" data="LOADFROMFILE Alphabet.xml Symbols word7 ENDLOAD"
+				accDesc="LOADFROMFILE Alphabet.xml LOADFROMHERE THISPAGE labelLetter1_7 ENDLOAD name ENDLOAD"></Item>
+			<Item name="labelLetter1_8" data="LOADFROMFILE Alphabet.xml Symbols word8 ENDLOAD"
+				accDesc="LOADFROMFILE Alphabet.xml LOADFROMHERE THISPAGE labelLetter1_8 ENDLOAD name ENDLOAD"></Item>
+			<Item name="labelLetter1_9" data="LOADFROMFILE Alphabet.xml Symbols word9 ENDLOAD"
+				accDesc="LOADFROMFILE Alphabet.xml LOADFROMHERE THISPAGE labelLetter1_9 ENDLOAD name ENDLOAD"></Item>
+			<Item name="labelLetter1_10" data="LOADFROMFILE Alphabet.xml Symbols word10 ENDLOAD"
+				accDesc="LOADFROMFILE Alphabet.xml LOADFROMHERE THISPAGE labelLetter1_10 ENDLOAD name ENDLOAD"></Item>
+			<Item name="InkCollectorHost1" guide="BOXED 10" data="INK_ITEM_TYPE_SUI_BOXSCRIPT"></Item>
+			<Item name="pageIndex" data="2"></Item>
+			<Item name="pageCount" data="LOADFROMHERE LettersWIZ.IDR_DUI_SCRIPTED_LETTERS PAGECOUNT 3 ENDLOAD"></Item>
+			<Item name="inkButton" action="EDITMODE INK"></Item>
+			<Item name="eraseButton" action="EDITMODE ERASE"></Item>
+			<Item name="clearButton" action="CLEAR CURRENT;EDITMODE INK"></Item>
+			<Item name="pText"></Item>
+		</Page>
+		<Page resID="IDR_DUI_SCRIPTED_SYMBOLS_LOOP1" nextAction="GOTO LettersWIZ.IDR_DUI_SCRIPTED_LETTERS">
+			<Item name="labelLetter1_1" data="LOADFROMFILE Alphabet.xml Symbols word11 ENDLOAD"
+				accDesc="LOADFROMFILE Alphabet.xml LOADFROMHERE THISPAGE labelLetter1_1 ENDLOAD name ENDLOAD"></Item>
+			<Item name="labelLetter1_2" data="LOADFROMFILE Alphabet.xml Symbols word12 ENDLOAD"
+				accDesc="LOADFROMFILE Alphabet.xml LOADFROMHERE THISPAGE labelLetter1_2 ENDLOAD name ENDLOAD"></Item>
+			<Item name="labelLetter1_3" data="LOADFROMFILE Alphabet.xml Symbols word13 ENDLOAD"
+				accDesc="LOADFROMFILE Alphabet.xml LOADFROMHERE THISPAGE labelLetter1_3 ENDLOAD name ENDLOAD"></Item>
+			<Item name="labelLetter1_4" data="LOADFROMFILE Alphabet.xml Symbols word14 ENDLOAD"
+				accDesc="LOADFROMFILE Alphabet.xml LOADFROMHERE THISPAGE labelLetter1_4 ENDLOAD name ENDLOAD"></Item>
+			<Item name="labelLetter1_5" data="LOADFROMFILE Alphabet.xml Symbols word15 ENDLOAD"
+				accDesc="LOADFROMFILE Alphabet.xml LOADFROMHERE THISPAGE labelLetter1_5 ENDLOAD name ENDLOAD"></Item>
+			<Item name="labelLetter1_6" data="LOADFROMFILE Alphabet.xml Symbols word16 ENDLOAD"
+				accDesc="LOADFROMFILE Alphabet.xml LOADFROMHERE THISPAGE labelLetter1_6 ENDLOAD name ENDLOAD"></Item>
+			<Item name="labelLetter1_7" data="LOADFROMFILE Alphabet.xml Symbols word17 ENDLOAD"
+				accDesc="LOADFROMFILE Alphabet.xml LOADFROMHERE THISPAGE labelLetter1_7 ENDLOAD name ENDLOAD"></Item>
+			<Item name="labelLetter1_8" data="LOADFROMFILE Alphabet.xml Symbols word18 ENDLOAD"
+				accDesc="LOADFROMFILE Alphabet.xml LOADFROMHERE THISPAGE labelLetter1_8 ENDLOAD name ENDLOAD"></Item>
+			<Item name="labelLetter1_9" data="LOADFROMFILE Alphabet.xml Symbols word19 ENDLOAD"
+				accDesc="LOADFROMFILE Alphabet.xml LOADFROMHERE THISPAGE labelLetter1_9 ENDLOAD name ENDLOAD"></Item>
+			<Item name="InkCollectorHost1" guide="BOXED 9" data="INK_ITEM_TYPE_SUI_BOXSCRIPT"></Item>
+			<Item name="pageIndex" data="3"></Item>
+			<Item name="pageCount" data="LOADFROMHERE LettersWIZ.IDR_DUI_SCRIPTED_LETTERS PAGECOUNT 3 ENDLOAD"></Item>
+			<Item name="inkButton" action="EDITMODE INK"></Item>
+			<Item name="eraseButton" action="EDITMODE ERASE"></Item>
+			<Item name="clearButton" action="CLEAR CURRENT;EDITMODE INK"></Item>
+			<Item name="pText"></Item>
+		</Page>
+	</Wizard>
+	<Wizard name="LettersWIZ" loop="LOADFROMFILE Alphabet.xml LettersUpperCase count ENDLOAD">
+		<Page resID="IDR_DUI_SCRIPTED_LETTERS" nextText="Save" nextAction="SAVE ALL;JUMP SavedWIZ.IDR_DUI_SAVED" 
+			backAction="JUMP ScriptedWIZ.IDR_DUI_HUB_SCRIPTED;CLEAR ALL">
+			<Item name="labelLetter1_1" data="LOADFROMFILE Alphabet.xml LettersUpperCase wordLOADFROMHERE THISPAGE PAGEINDEX ENDLOAD1 ENDLOAD"
+				hide="LOADFROMHERE THISPAGE labelLetter1_1 ENDLOAD"></Item>
+			<Item name="labelLetter1_2" data="LOADFROMFILE Alphabet.xml LettersLowerCase wordLOADFROMHERE THISPAGE PAGEINDEX ENDLOAD1 ENDLOAD"
+				hide="LOADFROMHERE THISPAGE labelLetter1_2 ENDLOAD"></Item>
+			<Item name="labelLetter1_3" data="LOADFROMFILE Alphabet.xml LettersUpperCase wordLOADFROMHERE THISPAGE PAGEINDEX ENDLOAD2 ENDLOAD"
+				hide="LOADFROMHERE THISPAGE labelLetter1_3 ENDLOAD"></Item>
+			<Item name="labelLetter1_4" data="LOADFROMFILE Alphabet.xml LettersLowerCase wordLOADFROMHERE THISPAGE PAGEINDEX ENDLOAD2 ENDLOAD"
+				hide="LOADFROMHERE THISPAGE labelLetter1_4 ENDLOAD"></Item>
+			<Item name="labelLetter1_5" data="LOADFROMFILE Alphabet.xml LettersUpperCase wordLOADFROMHERE THISPAGE PAGEINDEX ENDLOAD3 ENDLOAD"
+				hide="LOADFROMHERE THISPAGE labelLetter1_5 ENDLOAD"></Item>
+			<Item name="labelLetter1_6" data="LOADFROMFILE Alphabet.xml LettersLowerCase wordLOADFROMHERE THISPAGE PAGEINDEX ENDLOAD3 ENDLOAD"
+				hide="LOADFROMHERE THISPAGE labelLetter1_6 ENDLOAD"></Item>
+			<Item name="labelLetter1_7" data="LOADFROMFILE Alphabet.xml LettersUpperCase wordLOADFROMHERE THISPAGE PAGEINDEX ENDLOAD4 ENDLOAD"
+				hide="LOADFROMHERE THISPAGE labelLetter1_7 ENDLOAD"></Item>
+			<Item name="labelLetter1_8" data="LOADFROMFILE Alphabet.xml LettersLowerCase wordLOADFROMHERE THISPAGE PAGEINDEX ENDLOAD4 ENDLOAD"
+				hide="LOADFROMHERE THISPAGE labelLetter1_8 ENDLOAD"></Item>
+			<Item name="labelLetter1_9" data="LOADFROMFILE Alphabet.xml LettersUpperCase wordLOADFROMHERE THISPAGE PAGEINDEX ENDLOAD5 ENDLOAD"
+				hide="LOADFROMHERE THISPAGE labelLetter1_9 ENDLOAD"></Item>
+			<Item name="labelLetter1_10" data="LOADFROMFILE Alphabet.xml LettersLowerCase wordLOADFROMHERE THISPAGE PAGEINDEX ENDLOAD5 ENDLOAD"
+				hide="LOADFROMHERE THISPAGE labelLetter1_10 ENDLOAD"></Item>
+			<Item name="labelLetter1_11" data="LOADFROMFILE Alphabet.xml LettersUpperCase wordLOADFROMHERE THISPAGE PAGEINDEX ENDLOAD6 ENDLOAD"
+				hide="LOADFROMHERE THISPAGE labelLetter1_11 ENDLOAD"></Item>
+			<Item name="labelLetter1_12" data="LOADFROMFILE Alphabet.xml LettersLowerCase wordLOADFROMHERE THISPAGE PAGEINDEX ENDLOAD6 ENDLOAD"
+				hide="LOADFROMHERE THISPAGE labelLetter1_12 ENDLOAD"></Item>
+			<Item name="InkCollectorHost1" guide="BOXED 12" data="INK_ITEM_TYPE_SUI_BOXSCRIPT"></Item>
+			<Item name="pageIndex" data="LOADFROMHERE THISPAGE PAGEINDEX 3 ENDLOAD"></Item>
+			<Item name="pageCount" data="LOADFROMHERE THISPAGE PAGECOUNT 3 ENDLOAD"></Item>
+			<Item name="inkButton" action="EDITMODE INK"></Item>
+			<Item name="eraseButton" action="EDITMODE ERASE"></Item>
+			<Item name="clearButton" action="CLEAR CURRENT;EDITMODE INK"></Item>
+			<Item name="pText"></Item>
+		</Page>
+	</Wizard>
+	<Wizard name="PhrasesWIZ" loop="LOADFROMFILE Alphabet.xml PhraseSet1 count ENDLOAD">
+		<Page resID="IDR_DUI_SCRIPTED_PHRASES" nextText="Save" nextAction="SAVE ALL;JUMP SavedWIZ.IDR_DUI_SAVED" 
+			finishText="Save for later" finishAction="SAVE ALL;JUMP SavedWIZ.IDR_DUI_SAVED">
+			<Item name="labelLetter1" data="LOADFROMFILE Alphabet.xml PhraseSetLOADFROMCODE PhraseSet ENDLOAD wordLOADFROMHERE THISPAGE PAGEINDEX ENDLOAD ENDLOAD"></Item>
+			<Item name="InkCollectorHost1" guide="LINED 2" data="INK_ITEM_TYPE_SUI_LINESCRIPT"></Item>
+			<Item name="inkButton" action="EDITMODE INK"></Item>
+			<Item name="eraseButton" action="EDITMODE ERASE"></Item>
+			<Item name="clearButton" action="CLEAR CURRENT;EDITMODE INK"></Item>
+			<Item name="pageIndex" data="LOADFROMHERE THISPAGE PAGEINDEX ENDLOAD"></Item>
+			<Item name="pageCount" data="LOADFROMFILE Alphabet.xml PhraseSet1 count ENDLOAD"></Item>
+			<Item name="pText"></Item>
+		</Page>
+	</Wizard>
+	<Wizard name="TroubleshootWIZ">
+		<Page resID="IDR_DUI_HUB_USERDRIVENTROUBLESHOOT" nextAction="NONE" backAction="JUMP MainWIZ.IDR_DUI_HUB_MAIN">
+			<Item name="ccSysLink" action="HELP mshelp://windows/?id=9a111497-b562-403e-961f-643c56cca412#target_table"></Item>
+			<Item name="group1Link" action="JUMP IDR_DUI_TROUBLESHOOT_USER_CHAR_0"></Item>
+			<Item name="group1Img" action="JUMP IDR_DUI_TROUBLESHOOT_USER_CHAR_0"></Item>
+			<Item name="group2Link" action="JUMP ConfusablesWIZ.IDR_DUI_SCRIPTED_CONFUSABLES"></Item>
+			<Item name="group2Img" action="JUMP ConfusablesWIZ.IDR_DUI_SCRIPTED_CONFUSABLES"></Item>
+		</Page>
+		<Page resID="IDR_DUI_TROUBLESHOOT_USER_CHAR_0" nextAction="GOTO IDR_DUI_TROUBLESHOOT_USER_CHAR_1"
+			backAction="BACK;CLEAR ALL">
+			<Item name="editBox" action="ComplexActionForEditBox"></Item>
+			<Item name="clearButton" action="CLEAR editBox"></Item>
+			<Item name="pText"></Item>
+		</Page>
+		<Page resID="IDR_DUI_TROUBLESHOOT_USER_CHAR_1">
+			<Item name="toolTip_Title" data="LOADFROMFILE Alphabet.xml LOADFROMHERE IDR_DUI_TROUBLESHOOT_USER_CHAR_0 editBox ENDLOAD name ENDLOAD"></Item>
+			<Item name="labelLetter1_1" data="LOADFROMHERE IDR_DUI_TROUBLESHOOT_USER_CHAR_0 editBox ENDLOAD"></Item>
+			<Item name="labelLetter1_2" data="LOADFROMHERE THISPAGE labelLetter1_1 ENDLOAD"></Item>
+			<Item name="labelLetter1_3" data="LOADFROMHERE THISPAGE labelLetter1_1 ENDLOAD"></Item>
+			<Item name="labelLetter1_4" data="LOADFROMHERE THISPAGE labelLetter1_1 ENDLOAD"></Item>
+			<Item name="labelLetter1_5" data="LOADFROMHERE THISPAGE labelLetter1_1 ENDLOAD"></Item>
+			<Item name="InkCollectorHost1" guide="BOXED 5" data="INK_ITEM_TYPE_SUI_BOX_ORIGINAL"></Item>
+			<Item name="pageIndex" data="1"></Item>
+			<Item name="pageCount" data="3"></Item>
+			<Item name="inkButton" action="EDITMODE INK"></Item>
+			<Item name="eraseButton" action="EDITMODE ERASE"></Item>
+			<Item name="clearButton" action="CLEAR CURRENT;EDITMODE INK"></Item>
+			<Item name="pText"></Item>
+		</Page>
+		<Page resID="IDR_DUI_TROUBLESHOOT_USER_CHAR_3">
+			<Item name="toolTip1_Title" data="LOADFROMFILE Alphabet.xml LOADFROMFILE Alphabet.xml LOADFROMHERE PREVIOUSPAGE labelLetter1_1 ENDLOAD char1 ENDLOAD name ENDLOAD"></Item>
+			<Item name="labelLetter1_1" data="LOADFROMFILE Alphabet.xml LOADFROMHERE PREVIOUSPAGE labelLetter1_1 ENDLOAD char1 ENDLOAD"></Item>
+			<Item name="labelLetter1_2" data="LOADFROMHERE THISPAGE labelLetter1_1 ENDLOAD"></Item>
+			<Item name="labelLetter1_3" data="LOADFROMHERE THISPAGE labelLetter1_1 ENDLOAD"></Item>
+			<Item name="labelLetter1_4" data="LOADFROMHERE THISPAGE labelLetter1_1 ENDLOAD"></Item>
+			<Item name="labelLetter1_5" data="LOADFROMHERE THISPAGE labelLetter1_1 ENDLOAD"></Item>
+			<Item name="InkCollectorHost1" guide="BOXED 5" data="INK_ITEM_TYPE_SUI_BOX_ORIGINAL"></Item>
+			<Item name="toolTip2_Title" data="LOADFROMFILE Alphabet.xml LOADFROMFILE Alphabet.xml LOADFROMHERE PREVIOUSPAGE labelLetter1_1 ENDLOAD char2 ENDLOAD name ENDLOAD"></Item>
+			<Item name="labelLetter2_1" data="LOADFROMFILE Alphabet.xml LOADFROMHERE PREVIOUSPAGE labelLetter1_1 ENDLOAD char2 ENDLOAD"></Item>
+			<Item name="labelLetter2_2" data="LOADFROMHERE THISPAGE labelLetter2_1 ENDLOAD"></Item>
+			<Item name="labelLetter2_3" data="LOADFROMHERE THISPAGE labelLetter2_1 ENDLOAD"></Item>
+			<Item name="labelLetter2_4" data="LOADFROMHERE THISPAGE labelLetter2_1 ENDLOAD"></Item>
+			<Item name="labelLetter2_5" data="LOADFROMHERE THISPAGE labelLetter2_1 ENDLOAD"></Item>
+			<Item name="InkCollectorHost2" guide="BOXED 5" data="INK_ITEM_TYPE_SUI_BOX_ORIGINAL"></Item>
+			<Item name="inkButton" action="EDITMODE INK"></Item>
+			<Item name="eraseButton" action="EDITMODE ERASE"></Item>
+			<Item name="clearButton" action="CLEAR CURRENT;EDITMODE INK"></Item>
+			<Item name="pageIndex" data="2"></Item>
+			<Item name="pageCount" data="3"></Item>
+			<Item name="pText"></Item>
+		</Page>
+		<Page resID="IDR_DUI_TROUBLESHOOT_USER_CHAR_3_LOOP1" nextText="Save" nextAction="SAVE ALL;JUMP SavedWIZ.IDR_DUI_SAVED">
+			<Item name="toolTip1_Title" data="LOADFROMFILE Alphabet.xml LOADFROMFILE Alphabet.xml LOADFROMHERE IDR_DUI_TROUBLESHOOT_USER_CHAR_1 labelLetter1_1 ENDLOAD char3 ENDLOAD name ENDLOAD"></Item>
+			<Item name="labelLetter1_1" data="LOADFROMFILE Alphabet.xml LOADFROMHERE IDR_DUI_TROUBLESHOOT_USER_CHAR_1 labelLetter1_1 ENDLOAD char3 ENDLOAD"></Item>
+			<Item name="labelLetter1_2" data="LOADFROMHERE THISPAGE labelLetter1_1 ENDLOAD"></Item>
+			<Item name="labelLetter1_3" data="LOADFROMHERE THISPAGE labelLetter1_1 ENDLOAD"></Item>
+			<Item name="labelLetter1_4" data="LOADFROMHERE THISPAGE labelLetter1_1 ENDLOAD"></Item>
+			<Item name="labelLetter1_5" data="LOADFROMHERE THISPAGE labelLetter1_1 ENDLOAD"></Item>
+			<Item name="InkCollectorHost1" guide="BOXED 5" data="INK_ITEM_TYPE_SUI_BOX_ORIGINAL"></Item>
+			<Item name="toolTip2_Title" data="LOADFROMFILE Alphabet.xml LOADFROMFILE Alphabet.xml LOADFROMHERE IDR_DUI_TROUBLESHOOT_USER_CHAR_1 labelLetter1_1 ENDLOAD char4 ENDLOAD name ENDLOAD"></Item>
+			<Item name="labelLetter2_1" data="LOADFROMFILE Alphabet.xml LOADFROMHERE IDR_DUI_TROUBLESHOOT_USER_CHAR_1 labelLetter1_1 ENDLOAD char4 ENDLOAD"></Item>
+			<Item name="labelLetter2_2" data="LOADFROMHERE THISPAGE labelLetter2_1 ENDLOAD"></Item>
+			<Item name="labelLetter2_3" data="LOADFROMHERE THISPAGE labelLetter2_1 ENDLOAD"></Item>
+			<Item name="labelLetter2_4" data="LOADFROMHERE THISPAGE labelLetter2_1 ENDLOAD"></Item>
+			<Item name="labelLetter2_5" data="LOADFROMHERE THISPAGE labelLetter2_1 ENDLOAD"></Item>
+			<Item name="InkCollectorHost2" guide="BOXED 5" data="INK_ITEM_TYPE_SUI_BOX_ORIGINAL"></Item>
+			<Item name="inkButton" action="EDITMODE INK"></Item>
+			<Item name="eraseButton" action="EDITMODE ERASE"></Item>
+			<Item name="clearButton" action="CLEAR CURRENT;EDITMODE INK"></Item>
+			<Item name="pageIndex" data="3"></Item>
+			<Item name="pageCount" data="3"></Item>
+			<Item name="pText"></Item>
+		</Page>
+		<Page resID="IDR_DUI_TROUBLESHOOT_USER_CHAR_4" backAction="JUMP IDR_DUI_TROUBLESHOOT_USER_CHAR_0">
+			<Item name="initialPara_2" hide="hide"/>
+			<Item name="labelLetter1" data="LOADFROMHERE IDR_DUI_TROUBLESHOOT_USER_CHAR_0 editBox ENDLOAD"></Item>
+			<Item name="labelLetter2" data="LOADFROMHERE THISPAGE labelLetter1 ENDLOAD"></Item>
+			<Item name="InkCollectorHost1" guide="LINED 1" data="INK_ITEM_TYPE_SUI_LINE_ORIGINAL"></Item>
+			<Item name="InkCollectorHost2" guide="LINED 1" data="INK_ITEM_TYPE_SUI_LINE_ORIGINAL"></Item>
+			<Item name="pageIndex" data="1"></Item>
+			<Item name="pageCount" data="2"></Item>
+			<Item name="inkButton" action="EDITMODE INK"></Item>
+			<Item name="eraseButton" action="EDITMODE ERASE"></Item>
+			<Item name="clearButton" action="CLEAR CURRENT;EDITMODE INK"></Item>
+			<Item name="pText"></Item>
+		</Page>
+		<Page resID="IDR_DUI_TROUBLESHOOT_USER_CHAR_4_LOOP1" nextText="Save" nextAction="SAVE ALL;JUMP SavedWIZ.IDR_DUI_SAVED">
+			<Item name="initialPara" hide="hide"/>
+			<Item name="labelLetter1" data="LOADFROMHERE IDR_DUI_TROUBLESHOOT_USER_CHAR_0 editBox ENDLOAD"></Item>
+			<Item name="labelLetter2" data="LOADFROMHERE THISPAGE labelLetter1 ENDLOAD"></Item>
+			<Item name="InkCollectorHost1" guide="LINED 1" data="INK_ITEM_TYPE_SUI_LINE_ORIGINAL"></Item>
+			<Item name="InkCollectorHost2" guide="LINED 1" data="INK_ITEM_TYPE_SUI_LINE_ORIGINAL"></Item>
+			<Item name="pageIndex" data="2"></Item>
+			<Item name="pageCount" data="2"></Item>
+			<Item name="inkButton" action="EDITMODE INK"></Item>
+			<Item name="eraseButton" action="EDITMODE ERASE"></Item>
+			<Item name="clearButton" action="CLEAR CURRENT;EDITMODE INK"></Item>
+			<Item name="pText"></Item>
+		</Page>
+	</Wizard>
+	<Wizard name="ConfusablesWIZ">
+		<Page resID="IDR_DUI_SCRIPTED_CONFUSABLES" nextAction="NONE" backAction="JUMP TroubleshootWIZ.IDR_DUI_HUB_USERDRIVENTROUBLESHOOT">
+			<Item name="group1Link" data="LOADFROMFILE Alphabet.xml PredefinedSet1 name ENDLOAD" 
+				action="JUMP PredefinedSet1WIZ.IDR_DUI_TROUBLESHOOT_USER_CHAR_3"></Item>
+			<Item name="group1Img"
+				action="JUMP PredefinedSet1WIZ.IDR_DUI_TROUBLESHOOT_USER_CHAR_3"
+				accName="LOADFROMHERE group1Link ENDLOAD"></Item>
+			<Item name="group2Link" data="LOADFROMFILE Alphabet.xml PredefinedSet2 name ENDLOAD" 
+				action="JUMP PredefinedSet2WIZ.IDR_DUI_TROUBLESHOOT_USER_CHAR_3"></Item>
+			<Item name="group2Img"
+				action="JUMP PredefinedSet2WIZ.IDR_DUI_TROUBLESHOOT_USER_CHAR_3"
+				accName="LOADFROMHERE group2Link ENDLOAD"></Item>
+			<Item name="group3Link" data="LOADFROMFILE Alphabet.xml PredefinedSet3 name ENDLOAD" 
+				action="JUMP PredefinedSet3WIZ.IDR_DUI_TROUBLESHOOT_USER_CHAR_3"></Item>
+			<Item name="group3Img" 
+				action="JUMP PredefinedSet3WIZ.IDR_DUI_TROUBLESHOOT_USER_CHAR_3"
+				accName="LOADFROMHERE group3Link ENDLOAD"></Item>
+			<Item name="group4Link" data="LOADFROMFILE Alphabet.xml PredefinedSet4 name ENDLOAD" 
+				action="JUMP PredefinedSet4WIZ.IDR_DUI_TROUBLESHOOT_USER_CHAR_3"></Item>
+			<Item name="group4Img" 
+				action="JUMP PredefinedSet4WIZ.IDR_DUI_TROUBLESHOOT_USER_CHAR_3"
+				accName="LOADFROMHERE group4Link ENDLOAD"></Item>
+			<Item name="group5Link" data="LOADFROMFILE Alphabet.xml PredefinedSet5 name ENDLOAD" 
+				action="JUMP PredefinedSet5WIZ.IDR_DUI_TROUBLESHOOT_USER_CHAR_3"></Item>
+			<Item name="group5Img" 
+				action="JUMP PredefinedSet5WIZ.IDR_DUI_TROUBLESHOOT_USER_CHAR_3"
+				accName="LOADFROMHERE group5Link ENDLOAD"></Item>
+			<Item name="group6Link" data="LOADFROMFILE Alphabet.xml PredefinedSet6 name ENDLOAD" 
+				action="JUMP PredefinedSet6WIZ.IDR_DUI_TROUBLESHOOT_USER_CHAR_3"></Item>
+			<Item name="group6Img" 
+				action="JUMP PredefinedSet6WIZ.IDR_DUI_TROUBLESHOOT_USER_CHAR_3"
+				accName="LOADFROMHERE group6Link ENDLOAD"></Item>
+		</Page>
+	</Wizard>
+	<Wizard name="PredefinedSet1WIZ" loop="LOADFROMFILE Alphabet.xml PredefinedSet1 count ENDLOAD">
+		<Page resID="IDR_DUI_TROUBLESHOOT_USER_CHAR_3" backAction="JUMP ConfusablesWIZ.IDR_DUI_SCRIPTED_CONFUSABLES;CLEAR ALL"
+			  nextText="Save" nextAction="SAVE ALL;JUMP SavedWIZ.IDR_DUI_SAVED">
+			<Item name="toolTip1_Title" data="LOADFROMFILE Alphabet.xml LOADFROMFILE Alphabet.xml PredefinedSet1 charLOADFROMHERE THISPAGE PAGEINDEX ENDLOAD1 ENDLOAD name ENDLOAD"></Item>
+			<Item name="labelLetter1_1" data="LOADFROMFILE Alphabet.xml PredefinedSet1 charLOADFROMHERE THISPAGE PAGEINDEX ENDLOAD1 ENDLOAD"></Item>
+			<Item name="labelLetter1_2" data="LOADFROMHERE THISPAGE labelLetter1_1 ENDLOAD"></Item>
+			<Item name="labelLetter1_3" data="LOADFROMHERE THISPAGE labelLetter1_1 ENDLOAD"></Item>
+			<Item name="labelLetter1_4" data="LOADFROMHERE THISPAGE labelLetter1_1 ENDLOAD"></Item>
+			<Item name="labelLetter1_5" data="LOADFROMHERE THISPAGE labelLetter1_1 ENDLOAD"></Item>
+			<Item name="InkCollectorHost1" guide="BOXED 5" data="INK_ITEM_TYPE_SUI_BOX_ORIGINAL"></Item>
+			<Item name="toolTip2_Title" data="LOADFROMFILE Alphabet.xml LOADFROMFILE Alphabet.xml PredefinedSet1 charLOADFROMHERE THISPAGE PAGEINDEX ENDLOAD2 ENDLOAD name ENDLOAD"></Item>
+			<Item name="labelLetter2_1" data="LOADFROMFILE Alphabet.xml PredefinedSet1 charLOADFROMHERE THISPAGE PAGEINDEX ENDLOAD2 ENDLOAD"></Item>
+			<Item name="labelLetter2_2" data="LOADFROMHERE THISPAGE labelLetter2_1 ENDLOAD"></Item>
+			<Item name="labelLetter2_3" data="LOADFROMHERE THISPAGE labelLetter2_1 ENDLOAD"></Item>
+			<Item name="labelLetter2_4" data="LOADFROMHERE THISPAGE labelLetter2_1 ENDLOAD"></Item>
+			<Item name="labelLetter2_5" data="LOADFROMHERE THISPAGE labelLetter2_1 ENDLOAD"></Item>
+			<Item name="InkCollectorHost2" guide="BOXED 5" data="INK_ITEM_TYPE_SUI_BOX_ORIGINAL"></Item>
+			<Item name="inkButton" action="EDITMODE INK"></Item>
+			<Item name="eraseButton" action="EDITMODE ERASE"></Item>
+			<Item name="clearButton" action="CLEAR CURRENT;EDITMODE INK"></Item>
+			<Item name="pageIndex" data="LOADFROMHERE THISPAGE PAGEINDEX ENDLOAD"></Item>
+			<Item name="pageCount" data="LOADFROMHERE THISPAGE PAGECOUNT ENDLOAD"></Item>
+			<Item name="pText"></Item>
+		</Page>
+	</Wizard>
+	<Wizard name="PredefinedSet2WIZ" loop="LOADFROMFILE Alphabet.xml PredefinedSet2 count ENDLOAD">
+		<Page resID="IDR_DUI_TROUBLESHOOT_USER_CHAR_3" backAction="JUMP ConfusablesWIZ.IDR_DUI_SCRIPTED_CONFUSABLES;CLEAR ALL"
+			  nextText="Save" nextAction="SAVE ALL;JUMP SavedWIZ.IDR_DUI_SAVED">
+			<Item name="toolTip1_Title" data="LOADFROMFILE Alphabet.xml LOADFROMFILE Alphabet.xml PredefinedSet2 charLOADFROMHERE THISPAGE PAGEINDEX ENDLOAD1 ENDLOAD name ENDLOAD"></Item>
+			<Item name="labelLetter1_1" data="LOADFROMFILE Alphabet.xml PredefinedSet2 charLOADFROMHERE THISPAGE PAGEINDEX ENDLOAD1 ENDLOAD"></Item>
+			<Item name="labelLetter1_2" data="LOADFROMHERE THISPAGE labelLetter1_1 ENDLOAD"></Item>
+			<Item name="labelLetter1_3" data="LOADFROMHERE THISPAGE labelLetter1_1 ENDLOAD"></Item>
+			<Item name="labelLetter1_4" data="LOADFROMHERE THISPAGE labelLetter1_1 ENDLOAD"></Item>
+			<Item name="labelLetter1_5" data="LOADFROMHERE THISPAGE labelLetter1_1 ENDLOAD"></Item>
+			<Item name="InkCollectorHost1" guide="BOXED 5" data="INK_ITEM_TYPE_SUI_BOX_ORIGINAL"></Item>
+			<Item name="toolTip2_Title" data="LOADFROMFILE Alphabet.xml LOADFROMFILE Alphabet.xml PredefinedSet2 charLOADFROMHERE THISPAGE PAGEINDEX ENDLOAD2 ENDLOAD name ENDLOAD"></Item>
+			<Item name="labelLetter2_1" data="LOADFROMFILE Alphabet.xml PredefinedSet2 charLOADFROMHERE THISPAGE PAGEINDEX ENDLOAD2 ENDLOAD"></Item>
+			<Item name="labelLetter2_2" data="LOADFROMHERE THISPAGE labelLetter2_1 ENDLOAD"></Item>
+			<Item name="labelLetter2_3" data="LOADFROMHERE THISPAGE labelLetter2_1 ENDLOAD"></Item>
+			<Item name="labelLetter2_4" data="LOADFROMHERE THISPAGE labelLetter2_1 ENDLOAD"></Item>
+			<Item name="labelLetter2_5" data="LOADFROMHERE THISPAGE labelLetter2_1 ENDLOAD"></Item>
+			<Item name="InkCollectorHost2" guide="BOXED 5" data="INK_ITEM_TYPE_SUI_BOX_ORIGINAL"></Item>
+			<Item name="inkButton" action="EDITMODE INK"></Item>
+			<Item name="eraseButton" action="EDITMODE ERASE"></Item>
+			<Item name="clearButton" action="CLEAR CURRENT;EDITMODE INK"></Item>
+			<Item name="pageIndex" data="LOADFROMHERE THISPAGE PAGEINDEX ENDLOAD"></Item>
+			<Item name="pageCount" data="LOADFROMHERE THISPAGE PAGECOUNT ENDLOAD"></Item>
+			<Item name="pText"></Item>
+		</Page>
+	</Wizard>
+	<Wizard name="PredefinedSet3WIZ" loop="LOADFROMFILE Alphabet.xml PredefinedSet3 count ENDLOAD">
+		<Page resID="IDR_DUI_TROUBLESHOOT_USER_CHAR_3" backAction="JUMP ConfusablesWIZ.IDR_DUI_SCRIPTED_CONFUSABLES;CLEAR ALL"
+			  nextText="Save" nextAction="SAVE ALL;JUMP SavedWIZ.IDR_DUI_SAVED">
+			<Item name="toolTip1_Title" data="LOADFROMFILE Alphabet.xml LOADFROMFILE Alphabet.xml PredefinedSet3 charLOADFROMHERE THISPAGE PAGEINDEX ENDLOAD1 ENDLOAD name ENDLOAD"></Item>
+			<Item name="labelLetter1_1" data="LOADFROMFILE Alphabet.xml PredefinedSet3 charLOADFROMHERE THISPAGE PAGEINDEX ENDLOAD1 ENDLOAD"></Item>
+			<Item name="labelLetter1_2" data="LOADFROMHERE THISPAGE labelLetter1_1 ENDLOAD"></Item>
+			<Item name="labelLetter1_3" data="LOADFROMHERE THISPAGE labelLetter1_1 ENDLOAD"></Item>
+			<Item name="labelLetter1_4" data="LOADFROMHERE THISPAGE labelLetter1_1 ENDLOAD"></Item>
+			<Item name="labelLetter1_5" data="LOADFROMHERE THISPAGE labelLetter1_1 ENDLOAD"></Item>
+			<Item name="InkCollectorHost1" guide="BOXED 5" data="INK_ITEM_TYPE_SUI_BOX_ORIGINAL"></Item>
+			<Item name="toolTip2_Title" data="LOADFROMFILE Alphabet.xml LOADFROMFILE Alphabet.xml PredefinedSet3 charLOADFROMHERE THISPAGE PAGEINDEX ENDLOAD2 ENDLOAD name ENDLOAD"></Item>
+			<Item name="labelLetter2_1" data="LOADFROMFILE Alphabet.xml PredefinedSet3 charLOADFROMHERE THISPAGE PAGEINDEX ENDLOAD2 ENDLOAD"></Item>
+			<Item name="labelLetter2_2" data="LOADFROMHERE THISPAGE labelLetter2_1 ENDLOAD"></Item>
+			<Item name="labelLetter2_3" data="LOADFROMHERE THISPAGE labelLetter2_1 ENDLOAD"></Item>
+			<Item name="labelLetter2_4" data="LOADFROMHERE THISPAGE labelLetter2_1 ENDLOAD"></Item>
+			<Item name="labelLetter2_5" data="LOADFROMHERE THISPAGE labelLetter2_1 ENDLOAD"></Item>
+			<Item name="InkCollectorHost2" guide="BOXED 5" data="INK_ITEM_TYPE_SUI_BOX_ORIGINAL"></Item>
+			<Item name="inkButton" action="EDITMODE INK"></Item>
+			<Item name="eraseButton" action="EDITMODE ERASE"></Item>
+			<Item name="clearButton" action="CLEAR CURRENT;EDITMODE INK"></Item>
+			<Item name="pageIndex" data="LOADFROMHERE THISPAGE PAGEINDEX ENDLOAD"></Item>
+			<Item name="pageCount" data="LOADFROMHERE THISPAGE PAGECOUNT ENDLOAD"></Item>
+			<Item name="pText"></Item>
+		</Page>
+	</Wizard>
+	<Wizard name="PredefinedSet4WIZ" loop="LOADFROMFILE Alphabet.xml PredefinedSet4 count ENDLOAD">
+		<Page resID="IDR_DUI_TROUBLESHOOT_USER_CHAR_3" backAction="JUMP ConfusablesWIZ.IDR_DUI_SCRIPTED_CONFUSABLES;CLEAR ALL"
+			  nextText="Save" nextAction="SAVE ALL;JUMP SavedWIZ.IDR_DUI_SAVED">
+			<Item name="toolTip1_Title" data="LOADFROMFILE Alphabet.xml LOADFROMFILE Alphabet.xml PredefinedSet4 charLOADFROMHERE THISPAGE PAGEINDEX ENDLOAD1 ENDLOAD name ENDLOAD"></Item>
+			<Item name="labelLetter1_1" data="LOADFROMFILE Alphabet.xml PredefinedSet4 charLOADFROMHERE THISPAGE PAGEINDEX ENDLOAD1 ENDLOAD"></Item>
+			<Item name="labelLetter1_2" data="LOADFROMHERE THISPAGE labelLetter1_1 ENDLOAD"></Item>
+			<Item name="labelLetter1_3" data="LOADFROMHERE THISPAGE labelLetter1_1 ENDLOAD"></Item>
+			<Item name="labelLetter1_4" data="LOADFROMHERE THISPAGE labelLetter1_1 ENDLOAD"></Item>
+			<Item name="labelLetter1_5" data="LOADFROMHERE THISPAGE labelLetter1_1 ENDLOAD"></Item>
+			<Item name="InkCollectorHost1" guide="BOXED 5" data="INK_ITEM_TYPE_SUI_BOX_ORIGINAL"></Item>
+			<Item name="toolTip2_Title" data="LOADFROMFILE Alphabet.xml LOADFROMFILE Alphabet.xml PredefinedSet4 charLOADFROMHERE THISPAGE PAGEINDEX ENDLOAD2 ENDLOAD name ENDLOAD"></Item>
+			<Item name="labelLetter2_1" data="LOADFROMFILE Alphabet.xml PredefinedSet4 charLOADFROMHERE THISPAGE PAGEINDEX ENDLOAD2 ENDLOAD"></Item>
+			<Item name="labelLetter2_2" data="LOADFROMHERE THISPAGE labelLetter2_1 ENDLOAD"></Item>
+			<Item name="labelLetter2_3" data="LOADFROMHERE THISPAGE labelLetter2_1 ENDLOAD"></Item>
+			<Item name="labelLetter2_4" data="LOADFROMHERE THISPAGE labelLetter2_1 ENDLOAD"></Item>
+			<Item name="labelLetter2_5" data="LOADFROMHERE THISPAGE labelLetter2_1 ENDLOAD"></Item>
+			<Item name="InkCollectorHost2" guide="BOXED 5" data="INK_ITEM_TYPE_SUI_BOX_ORIGINAL"></Item>
+			<Item name="inkButton" action="EDITMODE INK"></Item>
+			<Item name="eraseButton" action="EDITMODE ERASE"></Item>
+			<Item name="clearButton" action="CLEAR CURRENT;EDITMODE INK"></Item>
+			<Item name="pageIndex" data="LOADFROMHERE THISPAGE PAGEINDEX ENDLOAD"></Item>
+			<Item name="pageCount" data="LOADFROMHERE THISPAGE PAGECOUNT ENDLOAD"></Item>
+			<Item name="pText"></Item>
+		</Page>
+	</Wizard>
+	<Wizard name="PredefinedSet5WIZ" loop="LOADFROMFILE Alphabet.xml PredefinedSet5 count ENDLOAD">
+		<Page resID="IDR_DUI_TROUBLESHOOT_USER_CHAR_3" backAction="JUMP ConfusablesWIZ.IDR_DUI_SCRIPTED_CONFUSABLES;CLEAR ALL"
+			  nextText="Save" nextAction="SAVE ALL;JUMP SavedWIZ.IDR_DUI_SAVED">
+			<Item name="toolTip1_Title" data="LOADFROMFILE Alphabet.xml LOADFROMFILE Alphabet.xml PredefinedSet5 charLOADFROMHERE THISPAGE PAGEINDEX ENDLOAD1 ENDLOAD name ENDLOAD"></Item>
+			<Item name="labelLetter1_1" data="LOADFROMFILE Alphabet.xml PredefinedSet5 charLOADFROMHERE THISPAGE PAGEINDEX ENDLOAD1 ENDLOAD"></Item>
+			<Item name="labelLetter1_2" data="LOADFROMHERE THISPAGE labelLetter1_1 ENDLOAD"></Item>
+			<Item name="labelLetter1_3" data="LOADFROMHERE THISPAGE labelLetter1_1 ENDLOAD"></Item>
+			<Item name="labelLetter1_4" data="LOADFROMHERE THISPAGE labelLetter1_1 ENDLOAD"></Item>
+			<Item name="labelLetter1_5" data="LOADFROMHERE THISPAGE labelLetter1_1 ENDLOAD"></Item>
+			<Item name="InkCollectorHost1" guide="BOXED 5" data="INK_ITEM_TYPE_SUI_BOX_ORIGINAL"></Item>
+			<Item name="toolTip2_Title" data="LOADFROMFILE Alphabet.xml LOADFROMFILE Alphabet.xml PredefinedSet5 charLOADFROMHERE THISPAGE PAGEINDEX ENDLOAD2 ENDLOAD name ENDLOAD"></Item>
+			<Item name="labelLetter2_1" data="LOADFROMFILE Alphabet.xml PredefinedSet5 charLOADFROMHERE THISPAGE PAGEINDEX ENDLOAD2 ENDLOAD"></Item>
+			<Item name="labelLetter2_2" data="LOADFROMHERE THISPAGE labelLetter2_1 ENDLOAD"></Item>
+			<Item name="labelLetter2_3" data="LOADFROMHERE THISPAGE labelLetter2_1 ENDLOAD"></Item>
+			<Item name="labelLetter2_4" data="LOADFROMHERE THISPAGE labelLetter2_1 ENDLOAD"></Item>
+			<Item name="labelLetter2_5" data="LOADFROMHERE THISPAGE labelLetter2_1 ENDLOAD"></Item>
+			<Item name="InkCollectorHost2" guide="BOXED 5" data="INK_ITEM_TYPE_SUI_BOX_ORIGINAL"></Item>
+			<Item name="inkButton" action="EDITMODE INK"></Item>
+			<Item name="eraseButton" action="EDITMODE ERASE"></Item>
+			<Item name="clearButton" action="CLEAR CURRENT;EDITMODE INK"></Item>
+			<Item name="pageIndex" data="LOADFROMHERE THISPAGE PAGEINDEX ENDLOAD"></Item>
+			<Item name="pageCount" data="LOADFROMHERE THISPAGE PAGECOUNT ENDLOAD"></Item>
+			<Item name="pText"></Item>
+		</Page>
+	</Wizard>
+	<Wizard name="PredefinedSet6WIZ" loop="LOADFROMFILE Alphabet.xml PredefinedSet6 count ENDLOAD">
+		<Page resID="IDR_DUI_TROUBLESHOOT_USER_CHAR_3" backAction="JUMP ConfusablesWIZ.IDR_DUI_SCRIPTED_CONFUSABLES;CLEAR ALL"
+			  nextText="Save" nextAction="SAVE ALL;JUMP SavedWIZ.IDR_DUI_SAVED">
+			<Item name="toolTip1_Title" data="LOADFROMFILE Alphabet.xml LOADFROMFILE Alphabet.xml PredefinedSet6 charLOADFROMHERE THISPAGE PAGEINDEX ENDLOAD1 ENDLOAD name ENDLOAD"></Item>
+			<Item name="labelLetter1_1" data="LOADFROMFILE Alphabet.xml PredefinedSet6 charLOADFROMHERE THISPAGE PAGEINDEX ENDLOAD1 ENDLOAD"></Item>
+			<Item name="labelLetter1_2" data="LOADFROMHERE THISPAGE labelLetter1_1 ENDLOAD"></Item>
+			<Item name="labelLetter1_3" data="LOADFROMHERE THISPAGE labelLetter1_1 ENDLOAD"></Item>
+			<Item name="labelLetter1_4" data="LOADFROMHERE THISPAGE labelLetter1_1 ENDLOAD"></Item>
+			<Item name="labelLetter1_5" data="LOADFROMHERE THISPAGE labelLetter1_1 ENDLOAD"></Item>
+			<Item name="InkCollectorHost1" guide="BOXED 5" data="INK_ITEM_TYPE_SUI_BOX_ORIGINAL"></Item>
+			<Item name="toolTip2_Title" data="LOADFROMFILE Alphabet.xml LOADFROMFILE Alphabet.xml PredefinedSet6 charLOADFROMHERE THISPAGE PAGEINDEX ENDLOAD2 ENDLOAD name ENDLOAD"></Item>
+			<Item name="labelLetter2_1" data="LOADFROMFILE Alphabet.xml PredefinedSet6 charLOADFROMHERE THISPAGE PAGEINDEX ENDLOAD2 ENDLOAD"></Item>
+			<Item name="labelLetter2_2" data="LOADFROMHERE THISPAGE labelLetter2_1 ENDLOAD"></Item>
+			<Item name="labelLetter2_3" data="LOADFROMHERE THISPAGE labelLetter2_1 ENDLOAD"></Item>
+			<Item name="labelLetter2_4" data="LOADFROMHERE THISPAGE labelLetter2_1 ENDLOAD"></Item>
+			<Item name="labelLetter2_5" data="LOADFROMHERE THISPAGE labelLetter2_1 ENDLOAD"></Item>
+			<Item name="InkCollectorHost2" guide="BOXED 5" data="INK_ITEM_TYPE_SUI_BOX_ORIGINAL"></Item>
+			<Item name="inkButton" action="EDITMODE INK"></Item>
+			<Item name="eraseButton" action="EDITMODE ERASE"></Item>
+			<Item name="clearButton" action="CLEAR CURRENT;EDITMODE INK"></Item>
+			<Item name="pageIndex" data="LOADFROMHERE THISPAGE PAGEINDEX ENDLOAD"></Item>
+			<Item name="pageCount" data="LOADFROMHERE THISPAGE PAGECOUNT ENDLOAD"></Item>
+			<Item name="pText"></Item>
+		</Page>
+	</Wizard>
+</ContentFile>

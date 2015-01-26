@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>http://www1.c3-net.ne.jp/index.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <lastmod>2013-04-20T11:54:05+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://www1.c3-net.ne.jp/annnai.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <lastmod>2012-07-25T15:22:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://www1.c3-net.ne.jp/bokushi.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <lastmod>2011-04-16T15:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://www1.c3-net.ne.jp/shinkou.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <lastmod>2013-01-11T06:00:26+00:00</lastmod>
+  </url>
+</urlset>

@@ -1,0 +1,17 @@
+<html>
+<body>
+<link href="./css/subpages.css" rel="stylesheet" type="text/css"></link>
+<span class="subPageTitle" onclick="test();">タイトルを記載します</span><br />
+本文を記載します<br />
+本文を記載します<br />
+本文を記載します<br />
+<br />
+<hr class="style-one"><br />
+<br />
+見出しを記載します<br />
+<p>
+中身を記載します<br />
+中身を記載します<br />
+</p> 
+</body>
+</html>
